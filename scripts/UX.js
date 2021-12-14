@@ -1132,7 +1132,7 @@ const UX = function () {
 			ls.removeItem("uinfo")
 			t.parentElement.innerHTML = `
 			<a href="${this.homePg}" class="link shop-lnk" >Home</a>
-			<a href="collection/store/${this.homePg}" class="link check-out-lnk" id="ord-btn" data-action="ORDER">Shop again!</a>
+			<a href="collections/store/${this.homePg}" class="link check-out-lnk" id="ord-btn" data-action="ORDER">Shop again!</a>
 			`
 			el.innerHTML += `
 			<div class="order-confrm">
