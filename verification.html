@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account verification | G's Dynasty</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Amwata Aseda">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/loader.css">
+	<link rel="stylesheet" href="styles/sigma.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/queries.css">
+	<link rel = "icon" href ="imgs/icon.svg?" >
+	<link rel = "mask-icon" href ="imgs/icon.png" >
+	<link rel = "icon" href ="imgs/icon.png?" type = "image/png">
+</head>
+<body>
+<div class="loader">
+    <div>
+         <span style="--l:0;"></span>
+         <span style="--l:1;"></span>
+         <span style="--l:2;"></span>
+         <span style="--l:3;"></span>
+         <span style="--l:4;"></span>
+    </div>
+</div>
+<main id="msc-ctn" class="sign-in verf-ctn">
+	<div class="sign-in-ctn">
+		<div class="frm-box">
+			<p class="verd">Sign up successful <i class="check"></i></p>
+			<div class="frm-ctn">
+			<a href="index.html" class="lg-ctn">
+				<img src="imgs/icon.svg" alt="icon">
+			</a>
+			<p>
+				Verification code has been sent to your email.
+			</p>
+			
+			<form class="verform" id="verform" autocomplete="off">
+				<div class="ver-field">
+					<input class="verf-inp" id="verf-inp" type="number" required autofocus>
+					<div class="dit-u">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				
+				<div class="verf-send">
+					<button class="verf-btn" type="submit" id="verf-btn">Verify</button>
+				</div>
+			</form>
+			</div>
+				<div class="sgnupli">
+					<ul>
+						<li><a href="index.html" >Home</a></li>
+						<li><a href="privacy-policy.html" >Privacy</a></li>
+						<li><a href="about-us.html#contact" >Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+	</div>
+</main>
+
+        <script src="scripts/verification.js"></script>
+        <script src="scripts/UI.js"></script>
+        <script src="scripts/UX.js"></script>
+</body>
+</html>
