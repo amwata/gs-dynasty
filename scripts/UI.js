@@ -157,7 +157,7 @@ const UI = function (loader) {
  
 	UI.prototype.slidView = function () {
 		this.views.forEach(view => {
-			if(this.isInView(view, 30)){
+			if(this.isInView(view, 25)){
 				view.classList.add("toview")
 			}else{view.classList.remove("toview")}
  		})
