@@ -921,7 +921,7 @@ const UX = function () {
 	Client_UX.prototype.loadSrchs = function () {
 		const ctn = document.querySelector("#items-box"),
 			load = JSON.parse(ls.getItem("search")),
-			srchInp = this.zip(ls.getItem("srchInp")),
+			srchInp = this.zip(ls.getItem("srchInp").toString()),
 			i = Number(ls.getItem("srpg")) ? (!!ls.getItem("srpg") ? ls.getItem("srpg") : 1) : 1
 		try{
 			const data = this.page(18, i, load),
