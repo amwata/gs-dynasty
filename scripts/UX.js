@@ -378,21 +378,21 @@ const UX = function () {
 		this.delFee = 4
 		this.sigma
 		
-		this.aboutPg = "about-us.html"
-		this.cartPg = "cart.html"
-		this.categoriesPg = "categories.html"
-		this.checkoutsPg = "checkouts.html"
-		this.errPg = "error.html"
-		this.homePg = "index.html"
-		this.loginPg = "sign-in.html"
-		this.orderPg = "order.html"
-		this.ordersPg = "orders-list.html"
-		this.privacyPg = "privacy-policy.html"
-		this.searchPg = "search.html"
-		this.shopPg = "shop.html"
-		this.storePg = "store.html"
-		this.uinfoPg = "user-information.html"
-		this.vericPg = "verification.html"
+		this.aboutPg = "about-us"
+		this.cartPg = "cart"
+		this.categoriesPg = "categories"
+		this.checkoutsPg = "checkouts"
+		this.errPg = "error"
+		this.homePg = ""
+		this.loginPg = "sign-in"
+		this.orderPg = "order"
+		this.ordersPg = "orders-list"
+		this.privacyPg = "privacy-policy"
+		this.searchPg = "search"
+		this.shopPg = "shop"
+		this.storePg = "store"
+		this.uinfoPg = "user-information"
+		this.vericPg = "verification"
 		
 	}
 	Client_UX.prototype = Object.create(UX.prototype)
