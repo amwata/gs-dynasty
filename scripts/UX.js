@@ -2,7 +2,7 @@
 let ss = window.sessionStorage,
 ls = window.localStorage
 const UX = function () {
-    this.url = "https://script.google.com/macros/s/AKfycbyOke6Oi1lXB8x0WW-NFdxqZJUT3xq67ureyCvyF9zsm0LS1KPtjoSlI301Kc0xWvc2Gg/exec"
+    this.url = "https://script.google.com/macros/s/AKfycbyIWCGgFcMx5FXqMCYhGrdTY7Wy33vmjGDBi8WrsnjPQ7p9q1AFnv6haq52ifULwrqBWQ/exec"
     this.imgUrl = "https://drive.google.com/uc?export=view&id"
     this.subs = 0
     const ua = navigator.userAgent
@@ -210,7 +210,8 @@ const UX = function () {
 		this.categoriesPg = "categories"
 		this.checkoutsPg = "checkouts"
 		this.errPg = "error"
-		this.homePg = "/"
+		this.indexPg = ""
+		this.homePg = "/gs-dynasty"
 		this.loginPg = "sign-in"
 		this.orderPg = "order"
 		this.ordersPg = "orders-list"
@@ -317,8 +318,8 @@ const UX = function () {
 			this.ASoneR(".arvl-lnk", this.homePg)
 
 			this.appendItems(1, ctn, "item-ctn", items, `collections/store/`, this.homePg)
-			this.nxtPg("stpg", `collections/store/${this.homePg}`)
-			this.prvPg("stpg", `collections/store/${this.homePg}`)
+			this.nxtPg("stpg", `collections/store/${this.indexPg}`)
+			this.prvPg("stpg", `collections/store/${this.indexPg}`)
 		}).catch(er => {
 			let htm = `<div class="err-txt">
 			<h1>Oops!</h1>
@@ -585,7 +586,7 @@ const UX = function () {
 			if(e.error){
 				throw new Error(e.error)
 			}ls.removeItem("auth")
-			location.href = `${url+this.homePg}`
+			location.href = this.homePg
 		}).catch(e => {
 			let htm = `<div class="err-txt">
 					   <h1>Oops!</h1>
@@ -707,7 +708,7 @@ const UX = function () {
 		try{
 			const ctn = document.querySelector("#items-box"),
 			load = JSON.parse(ls.getItem("sigma"))
-			this.preLoad(load.prods, "stpg", this.homePg, "", `collections/store/${this.homePg}`, "../../")
+			this.preLoad(load.prods, "stpg", this.homePg, "", `collections/store/${this.indexPg}`, "../../")
 		}catch(e) {
 			let htm = `<div class="err-txt">
 							<h1>Oops!</h1>
@@ -771,7 +772,7 @@ const UX = function () {
 							<a href="${this.homePg}" class="tag link">Home</a>
 						</div>`
 						ls.setItem("err", htm)
-					location.href = `../../${this.homePg}`
+					location.href = this.homePg
 				}else{
 					htm = `<div class="err-txt">
 					<h1>Oops!</h1>
@@ -959,7 +960,7 @@ const UX = function () {
 			ls.removeItem("uinfo")
 			t.parentElement.innerHTML = `
 			<a href="${this.homePg}" class="link shop-lnk" >Home</a>
-			<a href="collections/store/${this.homePg}" class="link check-out-lnk" id="ord-btn" data-action="ORDER">Shop again!</a>
+			<a href="collections/store/${this.indexPg}" class="link check-out-lnk" id="ord-btn" data-action="ORDER">Shop again!</a>
 			`
 			el.innerHTML += `
 			<div class="order-confrm">
@@ -1187,7 +1188,7 @@ const UX = function () {
 			    ctn.innerHTML = `
 			    <div class="cart-er">
 			    <p>Your orders list is currently empty.</p>
-			    <a href="collections/store/${this.homePg}" class="link shop-lnk" >Shop our products</a>
+			    <a href="collections/store/${this.indexPg}" class="link shop-lnk" >Shop our products</a>
 			    <a href="${this.homePg}" class="link check-out-lnk">Home</a>
 			    </div>`
 			    
@@ -1411,7 +1412,7 @@ const UX = function () {
 			<td colspan="3">KSh. ${total}</td>
 			</tr> `
 			ctn.innerHTML += `<div class="check-out">
-			<a href="collections/store/${this.homePg}" class="link shop-lnk" >Continue shopping</a>
+			<a href="collections/store/${this.indexPg}" class="link shop-lnk" >Continue shopping</a>
 			<a href="" class="link check-out-lnk" id="checkout-lnk" data-action="UINFO">Checkout</a>
 			</div>`
 			document.querySelector("#checkout-lnk").addEventListener("click", (e)=>{
@@ -1466,7 +1467,7 @@ const UX = function () {
 		}catch(er){
 			ctn.innerHTML = `<div class="cart-er">
 			<p>${this.zip(er.message.toString())}</p>
-			<a href="collections/store/${this.homePg}" class="link shop-lnk" >Shop our products</a>
+			<a href="collections/store/${this.indexPg}" class="link shop-lnk" >Shop our products</a>
 			<a href="${this.homePg}" class="link check-out-lnk">Home</a>
 			</div>`
 		}
@@ -1804,7 +1805,7 @@ const UX = function () {
 						 			<img src="../imgs/${this.store[k]}.png" alt="&sigma;">
 							 </a>`
 			ctn.append(div)
-		}this.subSet("store/", "../", `collections/${this.homePg}`)
+		}this.subSet("store/", "../", `collections/${this.indexPg}`)
 	}
 	
 	Client_UX.prototype.loadSignup = function(){
