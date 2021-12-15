@@ -1924,6 +1924,7 @@ const UX = function () {
 					end.querySelector("a").addEventListener("click", (e) =>{
 						e.preventDefault()
 						ls.setItem("search", JSON.stringify(x))
+						ls.setItem("srchInp", e.target.value)
 						ls.setItem("srpg", 1)
 						location.href = `${url+this.searchPg}`
 					})
