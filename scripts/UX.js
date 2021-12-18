@@ -918,13 +918,14 @@ const UX = function () {
 			
 				<h3>Contact</h3>
 				<div class="order-detail">
-				<p>${this.zip(info.email.toString())}</p>
-				<p>${this.zip(info.phone.toString())}</p>
+				<p><span class="oas">Email</span>: ${this.zip(info.email.toString())}</p>
+				<p><span class="oas">Tel</span>: ${this.zip(info.phone.toString())}</p>
 				</div>
 				<h3>Address</h3>
 				<div class="order-detail">
-				<p>${this.zip(info.address.toString())}, ${this.zip(info.twn.toString())}</p>
-				<p>${this.zip(info.cnty.toString())}</p>
+				<p><span class="oas">Street/Address</span>: ${this.zip(info.address.toString())}</p>
+				<p><span class="oas">Town</span>: ${this.zip(info.twn.toString())}</p>
+				<p><span class="oas">County</span>: ${this.zip(info.cnty.toString())}</p>
 			
 			`
 		}else throw new Error()
