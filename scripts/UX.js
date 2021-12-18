@@ -1328,8 +1328,7 @@ const UX = function () {
 			phone: form.querySelector("#phone"),
 			email: form.querySelector("#email"),
 			cnty: form.querySelector("#cnty"),
-			twn: form.querySelector("#twn"),
-			address: form.querySelector("#address")
+			twn: form.querySelector("#twn")
 		}
 		if(this.inValid(obj)) return
 		this.loadReq(t, "Processing ")
@@ -1340,6 +1339,7 @@ const UX = function () {
 			data.append(k, obj[k].value)
 		}
 		
+		data.append("address", form.querySelector("#address").value || "NULL")
 		data.append("clicks", ++this.subs)
 		data.append("tag", "client")
 		data.append("action", t.dataset.action)
