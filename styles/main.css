@@ -1206,7 +1206,7 @@ a img:hover, .foot .btm p a:hover > span img{
 	.err-ctn .err-srch span{
 		position:absolute;
 		display:inline-block;
-		left:0;
+		right:0;
 		top:50%;
 		padding:10px;
 		text-align:center;
@@ -1215,7 +1215,7 @@ a img:hover, .foot .btm p a:hover > span img{
 	.err-ctn .err-srch input{
 		width:100%;
 		display:block;
-		padding:10px 20px 10px 35px;
+		padding:10px 40px 10px 20px;
 		border:1px solid var(--lightcol3);
 		border-radius:4px;
 		outline:none;
