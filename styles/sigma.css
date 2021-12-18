@@ -607,6 +607,9 @@
 .order-info p{
 	font-size:.8rem;
 }
+.order-info p .oas{
+	font-weight:bold;
+}
 .frm-box .verd, .order-info .order-confrm{
 	background:#22c35033;
 	text-align:center;
