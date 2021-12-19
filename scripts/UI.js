@@ -11,7 +11,7 @@ const UI = function (loader) {
 	this.hdNav = document.querySelector("nav")
 	this.hdMn = document.querySelector(".hdmn")
 	this.lists = document.querySelectorAll(".mobile .hdmn .hash")
-	this.mobNav = document.querySelector(".mobile")
+	this.mobNav = document.querySelector("#mobile")
     this.views = Array.from(document.querySelectorAll(".inview"))
     this.loader = document.querySelector(loader)
 	this.hmview = document.querySelector(".hmdiv")
@@ -99,7 +99,7 @@ const UI = function (loader) {
 				offT = el.offsetTop
 				
 				this.hdClose.classList.remove("active")
-				this.mobNav.classList.remove("activea")
+				this.mobNav.classList.replace("activea", "mobile")
 				document.body.classList.remove("blur")
 				this.addScroll()
 				
@@ -136,15 +136,18 @@ const UI = function (loader) {
 		
 		this.hdClose.addEventListener("click",(e)=>{
 			this.hdClose.classList.toggle("active")
-			this.mobNav.classList.toggle("activea")
 			document.body.classList.toggle("blur")
 			this.toggleBodyscroll()
+			
+			if(this.mobNav.classList.contains("activea")){
+			    this.mobNav.classList.replace("activea", "mobile")
+			}else this.mobNav.classList.replace("mobile", "activea")
 		})
 		
 		window.addEventListener("click",(e)=>{
 			if(e.target == this.mobNav ){
 				this.hdClose.classList.remove("active")
-				this.mobNav.classList.remove("activea")
+				this.mobNav.classList.replace("activea", "mobile")
 				document.body.classList.remove("blur")
 				this.addScroll()
 			}
@@ -157,9 +160,9 @@ const UI = function (loader) {
  
 	UI.prototype.slidView = function () {
 		this.views.forEach(view => {
-			if(this.isInView(view, 25)){
-				view.classList.add("toview")
-			}else{view.classList.remove("toview")}
+			if(this.isInView(view, 30)){
+				view.classList.replace("inview", "toview")
+			}else{view.classList.replace("toview", "inview")}
  		})
  	}
  		
