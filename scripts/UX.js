@@ -1269,7 +1269,7 @@ const UX = function () {
 					</tr>
 					<tr>
 						<td colspan="2">Delivery fee</td>
-						<td>KSh. ${this.zip(delFee.toString())}</td>
+						<td>KSh. ${this.zip(delFee.toFixed(2).toString())}</td>
 					</tr>
 					<tr class="lc">
 						<td colspan="2">TOTAL</td>
