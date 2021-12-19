@@ -151,29 +151,35 @@
 		font-size:.7rem;
 	}
 	
-	.mobile .hdmn li{
+	.mobile .hdmn li,
+	.activea .hdmn li{
 		width:100%;
 		border-top:1px solid var(--lightcol2);
 	}
-	.mobile .hdmn .acc{
+	.mobile .hdmn .acc,
+	.activea .hdmn .acc{
 		padding:15px 0;
 		text-align:center;
 	}
-	.mobile .hdmn .acc a{
+	.mobile .hdmn .acc a,
+	.activea .hdmn .acc a{
 		padding:7px 30px;
 		display:inline-block;
 		color:var(--blacol);
 		border-radius:3px;
 		border:2px solid var(--blacol);
 	}
-	.mobile .hdmn .acc a:hover{
+	.mobile .hdmn .acc a:hover,
+	.activea .hdmn .acc a:hove{
 		color:var(--wtcol);
 	}
-	.mobile .hdmn .acc a:before{
+	.mobile .hdmn .acc a:before,
+	.activea .hdmn .acc a:before{
 		height:100%;
 		background:var(--blacol);
 	}
-	.mobile .hdmn .li a{
+	.mobile .hdmn .li a,
+	.activea .hdmn .li a{
 		padding:14px 15px;
 		display:block;
 		color:var(--blacol);
@@ -183,18 +189,22 @@
 		transition:transform .2s ease, opacity .2s ease;
 		transition-delay:calc(0.1s * var(--mi));
 	}
-	.blur .mobile .hdmn li a{
+	.blur .mobile .hdmn li a,
+	.blur .activea .hdmn li a{
 		opacity:1;
 		transform:translateY(0);
 	}
-	.mobile .hdmn li a i{
+	.mobile .hdmn li a i,
+	.activea .hdmn li a i{
 		padding-right:.8rem;
 		display:inline-block;
 	}
-	.mobile .hdmn .li a:hover{
+	.mobile .hdmn .li a:hover,
+	.activea .hdmn .li a:hover{
 		background:var(--lightcol1);
 	}
-	.mobile .hdmn .li a:hover > i{
+	.mobile .hdmn .li a:hover > i,
+	.activea .hdmn .li a:hover > i{
 		color:var(--dkcol1);
 	}
 	.hdview .active span{
@@ -221,9 +231,31 @@
 	}
 
 	.activea{
+		position:fixed;
+		display:flex;
+		width:100%;
+		top:0;
+		left:0;
+		height:100vh;
+		transition:all .5s ease;
+		background:var(--dkalpha);
+		z-index:110;
 		visibility:visible;
+		opacity: 1;
 	}
 	.activea .hdmn{
+		position:absolute;
+		flex-direction:column;
+		top:3rem;
+		left:0;
+		width:75%;
+		display:flex;
+		height:calc(100% - 3rem);
+		overflow-y:auto;
+		background:var(--wtcol);
+		justify-content:flex-start;
+		transition:all 0.5s ease;
+		z-index:1;
 		transform:translateX(0);
 		visibility:visible;
 		animation:lft .7s ease;
