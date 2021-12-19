@@ -165,20 +165,18 @@
 	.activea .hdmn .acc a{
 		padding:7px 30px;
 		display:inline-block;
-		color:var(--blacol);
+		color:var(--yellcol);
 		border-radius:3px;
 		border:2px solid var(--blacol);
-		z-index:2;
 	}
-	.mobile .hdmn .acc a:hover,
-	.activea .hdmn .acc a:hover{
+	.mobile .hdmn .acc a.link:hover,
+	.activea .hdmn .acc a.link:hover{
 		color:var(--wtcol);
 	}
 	.mobile .hdmn .acc a:before,
 	.activea .hdmn .acc a:before{
 		height:100%;
 		background:var(--blacol);
-		z-index:-1;
 	}
 	.mobile .hdmn .li a,
 	.activea .hdmn .li a{
