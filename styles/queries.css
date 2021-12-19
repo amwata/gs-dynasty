@@ -165,7 +165,7 @@
 	.activea .hdmn .acc a{
 		padding:7px 30px;
 		display:inline-block;
-		color:var(--yellcol);
+		color:var(--blacol);
 		border-radius:3px;
 		border:2px solid var(--blacol);
 	}
