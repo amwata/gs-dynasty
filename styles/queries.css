@@ -177,6 +177,7 @@
 	.activea .hdmn .acc a:before{
 		height:100%;
 		background:var(--blacol);
+		z-index:-1;
 	}
 	.mobile .hdmn .li a,
 	.activea .hdmn .li a{
