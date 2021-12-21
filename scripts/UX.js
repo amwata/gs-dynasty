@@ -3,7 +3,7 @@ let ss = window.sessionStorage,
 ls = window.localStorage
 const UX = function () {
     this.url = "https://script.google.com/macros/s/AKfycbyheDTeMZWSTkDKLKwnENqD3L_0VmcWMASrYNIH-7d7l76I53-nvcIsrx8le8az4sww5A/exec"
-    this.imgUrl = "https://drive.google.com/uc?export=view&id"
+    this.imgUrl = "https://drive.google.com/uc?id"
     this.subs = 0
     const ua = navigator.userAgent
     let s = ua.indexOf(";") + 1, e = ua.indexOf(")")
