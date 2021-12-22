@@ -481,7 +481,7 @@ const UX = function () {
 	
 	UX.prototype.sieve = function (items, x) {
 		const srchMatch = [],
-		re = x.toString().toLowerCase() === "travel" ?  new RegExp(`^{this.escRx(x)}`, "gi") : new RegExp(`^${this.escRx(x)}$`, "gi")
+		re = x.toString().toLowerCase() === "travel" ?  new RegExp(`${this.escRx(x)}`, "gi") : new RegExp(`^${this.escRx(x)}$`, "gi")
 		
 		srchMatch.push(items.filter(j => {
 			return j[2].toString().match(re) || j[3].toString().match(re)
