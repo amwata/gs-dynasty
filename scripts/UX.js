@@ -1905,7 +1905,7 @@ const UX = function () {
 			let htm = `<div class="err-txt">
 			<h1>Oops!</h1>
 			<p>${eer.message}. Please Try Again!</p>
-			<a href="${this.presetPg}" class="tag link">Reset your password</a>
+			<a href="${this.presetPg}" class="tag link">Get link</a>
 			</div>`
 			ls.setItem("err", htm)
 			location.href = this.errPg
