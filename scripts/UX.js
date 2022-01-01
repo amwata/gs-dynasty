@@ -2,7 +2,7 @@
 let ss = window.sessionStorage,
 ls = window.localStorage
 const UX = function () {
-    this.url = "https://script.google.com/macros/s/AKfycby4tQkUJavaDOUqdQ3sZu2agUU5ORnvKza695VyevwFdqOJmqIVeuvILLYPKqmuCi1ang/exec"
+    this.url = "https://script.google.com/macros/s/AKfycbw9DKtBAAvgxP9LjiY5plyowNB8aiIEnw5B7oN0bhX5vRmnhcE8cyaOGYV22JubA6VpSw/exec"
     this.imgUrl = "https://drive.google.com/uc?id"
     this.subs = 0
     const ua = navigator.userAgent
@@ -215,6 +215,7 @@ const UX = function () {
 		this.loginPg = "sign-in"
 		this.orderPg = "order"
 		this.ordersPg = "orders-list"
+		this.presetPg = "forgot-password"
 		this.privacyPg = "privacy-policy"
 		this.searchPg = "search"
 		this.shopPg = "shop"
@@ -1904,7 +1905,7 @@ const UX = function () {
 			let htm = `<div class="err-txt">
 			<h1>Oops!</h1>
 			<p>${eer.message}. Please Try Again!</p>
-			<a href="${this.homePg}" class="tag link">Home</a>
+			<a href="${this.presetPg}" class="tag link">Reset your password</a>
 			</div>`
 			ls.setItem("err", htm)
 			location.href = this.errPg
