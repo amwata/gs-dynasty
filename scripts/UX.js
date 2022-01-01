@@ -2,7 +2,7 @@
 let ss = window.sessionStorage,
 ls = window.localStorage
 const UX = function () {
-    this.url = "https://script.google.com/macros/s/AKfycbw9DKtBAAvgxP9LjiY5plyowNB8aiIEnw5B7oN0bhX5vRmnhcE8cyaOGYV22JubA6VpSw/exec"
+    this.url = "https://script.google.com/macros/s/AKfycbwgxIpSfmMyrCsNeoXairN6pSKh-c9zMz8vTbwh3lthG4DEz1a5ydPoDMZ0Qn-R5l0dEw/exec"
     this.imgUrl = "https://drive.google.com/uc?id"
     this.subs = 0
     const ua = navigator.userAgent
