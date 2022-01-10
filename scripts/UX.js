@@ -709,7 +709,7 @@ const UX = function () {
 		try{
 			const ctn = document.querySelector("#items-box"),
 			load = JSON.parse(ls.getItem("sigma"))
-			this.preLoad(load.prods, "stpg", this.homePg, "", `collections/store/${this.indexPg}`, "../../")
+			this.preLoad(load.prods, "stpg", this.indexPg, "", `collections/store/${this.indexPg}`, "../../")
 		}catch(e) {
 			let htm = `<div class="err-txt">
 							<h1>Oops!</h1>
